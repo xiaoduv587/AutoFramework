@@ -1,0 +1,18 @@
+<suite name="dsa" verbose="2" allow-return-values="true"
+       parallel="tests" thread-count="1" preserve-order="true">
+    <listeners>
+<!--        <listener class-name='com.epam.reportportal.testng.ReportPortalTestNGListener' />-->
+    </listeners>
+
+
+    <test name="TestCase_发帖" enabled="true" preserve-order="true">
+        <classes>
+<!--            <class name="Test"/>-->
+        </classes>
+    </test>
+
+
+
+
+
+</suite>
