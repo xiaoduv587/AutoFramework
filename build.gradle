@@ -1,0 +1,95 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+
+sourceSets {
+    data {
+        java {
+            srcDirs = ['src/main/java', 'src/test/java']
+        }
+    }
+    main {
+        java {
+            srcDirs = ['src/main/java', 'src/test/java']
+        }
+    }
+}
+
+dependencies {
+    // Selenide
+    implementation 'com.codeborne:selenide:6.15.0'
+    implementation 'com.codeborne:selenide-testng:6.15.0'
+    implementation 'com.codeborne:selenide-appium:2.8.1'
+
+
+    // TestNG
+    implementation 'org.testng:testng:7.7.1'
+
+    // JUnit Jupiter
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+
+    // Lombok
+    implementation 'org.projectlombok:lombok:1.18.24'
+
+    // SLF4J
+    implementation 'org.slf4j:slf4j-simple:2.0.3'
+
+    // JavaFaker
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+
+    // RestAssured
+    implementation 'io.rest-assured:rest-assured:5.2.0'
+
+    // Owner
+    implementation 'org.aeonbits.owner:owner:1.0.12'
+
+    // Log4j
+    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+
+    // Allure
+    implementation 'io.qameta.allure:allure-testng:2.21.0'
+    implementation 'io.qameta.allure:allure-rest-assured:2.21.0'
+    implementation 'io.qameta.allure:allure-selenide:2.21.0'
+
+    // FastJSON
+    implementation 'com.alibaba:fastjson:2.0.28'
+
+    // Commons Collections
+    implementation 'org.apache.commons:commons-collections4:4.2'
+
+    // Hamcrest
+    implementation 'org.hamcrest:java-hamcrest:2.0.0.0'
+
+    // AssertJ
+    implementation 'org.assertj:assertj-core:3.21.0'
+
+    // JsonPath
+    implementation 'com.jayway.jsonpath:json-path:2.5.0'
+
+    // CSV
+    implementation 'org.apache.commons:commons-csv:1.9.0'
+
+    // Freemarker
+    implementation 'org.freemarker:freemarker:2.3.31'
+
+    // OpenCSV
+    implementation 'com.opencsv:opencsv:4.3.2'
+
+    compile "org.projectlombok:lombok:1.18.16"
+    annotationProcessor "org.projectlombok:lombok:1.18.16"
+    testCompileOnly "org.projectlombok:lombok:1.18.16"
+    testAnnotationProcessor "org.projectlombok:lombok:1.18.16"
+}
+
+test {
+    useTestNG()
+}
+
