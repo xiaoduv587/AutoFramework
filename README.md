@@ -42,7 +42,13 @@ AutoFrameWork的架构采用模块化设计，主要包括移动端测试模块�
 
 - [ ] 写api的测试代码
 
-- [ ] 优化FrameWrokConfig的代码
+- [x] 优化FrameWrokConfig的代码
+
+- [ ] API将curl的代码转成idea插件
+
+- [ ] 手机端将元素操作转成idea插件
+
+- [ ] 
 
   
 
