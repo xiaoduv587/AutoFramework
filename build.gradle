@@ -24,6 +24,9 @@ sourceSets {
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+
     // Selenide
     implementation 'com.codeborne:selenide:6.15.0'
     implementation 'com.codeborne:selenide-testng:6.15.0'
@@ -87,6 +90,9 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok:1.18.16"
     testCompileOnly "org.projectlombok:lombok:1.18.16"
     testAnnotationProcessor "org.projectlombok:lombok:1.18.16"
+
+
+
 }
 
 test {

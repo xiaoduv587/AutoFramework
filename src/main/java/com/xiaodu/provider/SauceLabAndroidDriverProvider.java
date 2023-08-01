@@ -15,6 +15,7 @@ import org.openqa.selenium.WebDriver;
 
 import javax.annotation.Nonnull;
 import java.io.File;
+import java.net.URL;
 
 @Log4j2
 public class SauceLabAndroidDriverProvider implements WebDriverProvider {
@@ -43,6 +44,6 @@ public class SauceLabAndroidDriverProvider implements WebDriverProvider {
         options.setCapability(AndroidMobileCapabilityType.CHROMEDRIVER_EXECUTABLE, chromedriver.getAbsolutePath());
 
 
-        return  new AndroidDriver(FrameWorkConfig.instance().APPIUM_HUB_URL.getValue(), options);
+        return  new AndroidDriver(new URL(FrameWorkConfig.instance().APPIUM_HUB_URL.getValue()), options);
     }
 }

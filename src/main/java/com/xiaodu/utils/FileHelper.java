@@ -69,30 +69,6 @@ public class FileHelper {
     }
 
     /**
-     * 用在gradle运行时去掉module名
-     * 获取根目录的Parent路径(根目录的上级目录)
-     *
-     * @return root dir
-     */
-    public static String getTestngReportsRootDir() {
-        String envRootDir = System.getProperty("user.dir");
-        Path rootDIr = Paths.get(".").normalize().toAbsolutePath();
-        if (rootDIr.startsWith(envRootDir)) {
-            String parentPath = new File(envRootDir).getAbsolutePath();
-            String runType = FrameWorkConfig.instance().RUN_TYPE.getValue();
-            if (runType.equalsIgnoreCase("gradle")) {//如果是gradle,需要去掉项目名
-                parentPath = parentPath.substring(0, parentPath.lastIndexOf(File.separator));
-            }
-            parentPath = parentPath + File.separator + "runShellRetry-output";
-            return parentPath;
-        } else {
-            throw new RuntimeException("Root dir not found in user directory.");
-        }
-    }
-
-
-
-    /**
      * Through InputStream access to Resources the file content
      *
      * @param fileName

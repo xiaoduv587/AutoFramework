@@ -118,15 +118,6 @@ public class FrameWorkConfig {
 //			"http://10.62.142.12:4444/wd/hub"
     ).setDescription("远程Appium Hub地址");
 
-    /**
-     * 控制测试结果是否要上传到sdet
-     *
-     * @deprecated SDET功能已弃用2022/9/21
-     */
-    public ConfigKey<Boolean> UPLOAD_RESULT_TO_SDET_DASHBOARD = new ConfigKey<Boolean>(
-            PREFIX_KEY + "UPLOAD_RESULT_TO_SDET_DASHBOARD", Boolean.class, false)
-            .setDescription("控制测试结果是否上传到SDET平台，默认值false（配合参数USE_LOCAL_XML=true使用）");
-
 	/**
 	 * 控制初始化浏览器实例时是否使用无头模式
 	 */
@@ -235,14 +226,6 @@ public class FrameWorkConfig {
     public ConfigKey<String> TESTDATA_FILE_NAME = new ConfigKey<String>(PREFIX_KEY + "TESTDATA_FILE_NAME", String.class,
             "TestData.xlsx");
 
-//	public ConfigKey<String> FTP_USERNAME = new ConfigKey<String>(PREFIX_KEY + "FTP_USERNAME", String.class, "");
-
-//	public ConfigKey<Integer> FTP_PORT = new ConfigKey<Integer>(PREFIX_KEY + "FTP_PORT", Integer.class, 21);
-
-//	public ConfigKey<String> FTP_PWD = new ConfigKey<String>(PREFIX_KEY + "FTP_PWD", String.class, "");
-
-//	public ConfigKey<String> FTP_HOST = new ConfigKey<String>(PREFIX_KEY + "FTP_HOST", String.class, "");
-
     public ConfigKey<String> SCREENSHORTS_FILE_SUFFIX = new ConfigKey<String>(PREFIX_KEY + "SCREENSHORTS_FILE_SUFFIX",
             String.class, "png");
 
@@ -254,6 +237,14 @@ public class FrameWorkConfig {
 
     public ConfigKey<String> STF_TOKEN = new ConfigKey<String>(PREFIX_KEY + "STF_TOKEN", String.class,
             "d07979fb31054319985b2ec11fcd67c436682d7b958b4bafa38de91a8b8dcd84");
+
+    /**
+     * selenoid
+     */
+    public ConfigKey<Boolean> SELENOID_ENABLE_VNC= new ConfigKey(PREFIX_KEY + "SELENOID_ENABLE_VNC", Boolean.class, true);
+    public ConfigKey<Boolean> SELENOID_ENABLE_VIDEO= new ConfigKey(PREFIX_KEY + "SELENOID_ENABLE_VIDEO", Boolean.class, true);
+    public ConfigKey<Boolean> USE_SELENOID_HUB= new ConfigKey(PREFIX_KEY + "USE_SELENOID_HUB", Boolean.class, false).setDescription("是否使用ggr(selenoid_hub),如果用到的话，录屏格式会有些许差别");
+
 
     /**
      * reportportal配置

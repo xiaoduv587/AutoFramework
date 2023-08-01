@@ -51,15 +51,6 @@ public class RunTestNG {
         String projectName = FrameWorkConfig.instance().PROJECT_NAME.getValue();
 
 
-        boolean selenoidISEnable = FrameWorkConfig.instance().SELENOID_IS_ENABLE.getValue();
-        String driverType = FrameWorkConfig.instance().DRIVER_TYPE.getValue();
-
-
-        if (selenoidISEnable && "chrome".equalsIgnoreCase(driverType)) {
-            FrameWorkConfig.instance().DRIVER_TYPE.setValue("remote");
-            log.warn("Note: You should not have 'BF_IS_ENABLE'='true' when 'DRIVER_TYPE' is set to 'chrome' , overwriting 'DRIVER_TYPE' to 'remote'");
-        }
-
 
         // create TestNG object
         TestNG testNG = new TestNG();
